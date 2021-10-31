@@ -26,6 +26,6 @@ app.use("/api/users", userRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
-app.listen(5000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Backend server is running!");
 });
