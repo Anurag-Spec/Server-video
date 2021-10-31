@@ -26,6 +26,6 @@ app.use("/api/users", userRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
-app.listen("https://video-library1.herokuapp.com/", () => {
+app.listen(process.env.PORT, () => {
   console.log("Backend server is running!");
 });
