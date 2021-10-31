@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const authRoute = require("./Routes/auth");
 const userRoute = require("./Routes/users");
 const movieRoute = require("./Routes/movies");
@@ -20,6 +21,7 @@ mongoose
   });
 
 app.use(express.json());
+app.use(cors);
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
